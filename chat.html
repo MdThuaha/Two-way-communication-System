@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Chat UI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="node_modules/socket.io/client-dist/socket.io.js"></script>
+    <script src="node_modules/socketio-file-upload/client.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="scripts/chat.js"></script>
+  </head>
+  <body>
+    <nav class="menu">
+      <span class="brand">ChatHub</span>
+      <ul class="links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="chat.html">Chat </a></li>
+      </ul>
+    </nav>
+    <main class="container">
+      <div class="mid50" id="join-div" style="display: none">
+        <div class="flexrow">
+          <input id="user" placeholder="User Name..." class="text" /><button
+            type="button"
+            id="join"
+            class="gbutton"
+          >
+            Connect
+          </button>
+        </div>
+      </div>
+      <div class="panel" id="chat-div" style="display: none">
+        <div>
+          <div>
+            <div class="list-head">Users Online </div>
+            <ul id="users" class="list" style="min-height:200px; height:200px;overflow:auto"></ul>
+          </div>
+          <div>
+            <div class="column">
+              <div class="list-head">Share private</div>
+              <form id="form">
+                <div class="flexrow" style="padding: 5px 15px" >
+                  <select id="to" class="text"  required></select>
+                </div>
+                <div class="flexrow" style="padding: 5px 15px">
+                  <input
+                    placeholder="name..."
+                    id="name"
+                    class="text"
+                    required
+                  />
+                </div>
+                <div class="flexrow" style="padding: 5px 15px">
+                  <input type="number" id="number" class="text" placeholder ="phone..e">
+                </div>
+                <div class="flexrow" style="padding: 5px 15px">
+                  <input type="email"
+                    placeholder="email..."
+                    id="email"
+                   class="text"
+                  />
+                </div>
+                <div
+                  class="flexrow"
+                  style="padding: 5px 15px; justify-content: flex-end"
+                >
+                  <button id="share" type="button" class="gbutton">Share</button>
+                </div>
+              </form>
+            </div>
+            <div
+            class="column"
+            style="
+              padding: 15px;
+              height: 300px;
+              min-height: 300px;
+              overflow: auto;
+            "
+          >
+            <div class="list-head">Private Share</div>
+            <div id="private"></div>
+          </div> <!--private note share-->
+          </div>
+        </div> 
+        <!-- user -->
+        <div>
+          <div
+            class="column"
+            id="display-name"
+            style="font-weight: 500; padding: 15px"
+          ></div>
+          <div class="column">
+            <div class="flexrow" style="padding: 15px">
+              <input id="msg" placeholder="message..." class="text" /><button
+                type="button"
+                id="send"
+                class="gbutton"
+              >
+                Send</button
+              ><button type="button" id="browse" class="gbutton">Upload</button>
+            </div>
+          </div>
+          <div
+            class="column"
+            style="
+              padding: 15px;
+              height: 250px;
+              min-height: 250px;
+              overflow: auto;
+            "
+          >
+            <div class="list-head">Messages</div>
+            <ul id="messages" class="list"></ul>
+          </div>
+          <div
+            class="column"
+            style="
+              padding: 15px;
+              height: 300px;
+              min-height: 300px;
+              overflow: auto;
+            "
+          >
+            <div class="list-head">File Shares</div>
+            <div class="file-box" id="file-box"></div>
+          </div>
+          
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+    <input type="file" id="fu" style="display: none" />
+  </body>
+</html>

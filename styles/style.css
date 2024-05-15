@@ -1,0 +1,179 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Noto Sans', sans-serif
+}
+.brand
+{
+    color: white;
+    font-weight: 1000;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    font-style:italic;
+
+}
+.menu
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    background-color: #4CAF50;
+    
+}
+.links
+{
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    
+
+}
+.links li{
+    margin-right: 1px;
+}
+.links a{
+    display: inline-block;
+    width: 110px;
+    text-decoration: none;
+    padding: 1.25rem .5rem;
+    text-align: center;
+    font-size: 1.2rem;
+    color: white;
+    
+    
+}
+.links a:hover
+{
+    border-radius: .50rem;
+    background-color: #367c39;
+    
+}
+/* panels */
+.container
+{
+    width: 97.5%;
+    margin: 16px auto;
+}
+.mid50
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 50%;
+    margin: 8px auto;
+}
+.flexrow
+{
+    display: flex;
+}
+.panel
+{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    width: 100%;
+
+}
+.column
+{
+    width: 100%;
+   margin: 15px 0;
+}
+.share
+{
+    padding: 10px;
+    border: solid 1px #ccc;
+    border-radius: .5rem;
+    margin-bottom: 8px;
+}
+.share div
+{
+    margin-bottom: 8px;
+}
+.file-box
+{
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    
+}
+.box {
+    width: 170px;
+    margin: 5px;
+}
+.box img{
+    width: 170px;
+}
+.box div
+{
+    text-align: center;
+    margin: 5px;
+}
+/* list */
+.list-head
+{
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.list{
+    list-style: none;
+    padding: 0;
+    color:#fff
+    
+}
+.list li{
+    background-color: #4CAF50;
+    color: #FFFFFF;
+    margin-bottom: 1px;
+    padding: .5rem .25rem;
+    border-radius: .30rem;
+}
+/* from */
+.text 
+{
+    flex: 1 1 auto;
+    padding: .5rem;
+}
+.gbutton
+    {
+        background-color:#4CAF50;
+        border: 0;
+        border-radius: 4px;
+        box-shadow: rgba(0, 0, 0, .3) 0 5px 15px;
+        box-sizing: border-box;
+        color: #fff;
+        cursor: pointer;
+        font-family: Montserrat,sans-serif;
+        font-size: .9em;
+        margin: 5px;
+        padding: 10px 10px;
+        text-align: center;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+      }
+    .gbutton:hover {
+        background-color: #367c39;
+        border-radius: .30rem;
+    }
+    
+    #infodiv{
+        display: flex;
+        justify-content: center;
+        margin-right: 200px;
+        flex-wrap: wrap;
+    }
+    .info{
+        margin-top: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
